@@ -1,0 +1,73 @@
+
+.div-1 {
+    border: solid;
+    padding: 20px;
+    margin: 20px auto;
+    width: 700px;
+    background: silver;
+}
+
+.div-2 {
+    border: solid;
+    padding: 20px;
+    margin: auto;
+    width: 700px;
+    background: silver;
+    text-align: center;
+}
+
+.folders {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.files {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.item {
+    border: solid 1px;
+    padding: 15px;
+    background: white;
+    min-width: 120px;
+}
+
+.item form {
+    margin-top: 10px;
+}
+
+.item input {
+    width: 100px;
+    margin-bottom: 5px;
+}
+
+.item button {
+    margin: 3px;
+    cursor: pointer;
+}
+
+.editor {
+    border: solid;
+    padding: 20px;
+    margin: 20px auto;
+    width: 700px;
+    background: silver;
+}
+
+.editor textarea {
+    width: 98%;
+    height: 300px;
+    resize: vertical;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.editor button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
