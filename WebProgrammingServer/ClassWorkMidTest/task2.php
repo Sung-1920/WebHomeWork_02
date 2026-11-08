@@ -1,13 +1,26 @@
 <?php
+
+$message = "";
+
     if (isset($_POST["username"]) && isset($_POST["password"])) {
         $username = $_POST["username"];
         $password = $_POST["password"];
 
         $users = file("users.txt");
 
+    $found = false;
+
         foreach ($users as $user){
-            $data = explode(", ", trim($user));
+            $data = explode(",", trim($user));
+            if ($data[0] == $username && $data[1] == $password){
+                $message = "მოგესალმებით,". $username. "!";
+                $found = true;
+            }
         }
+    }
+
+    if (!$found){
+        $message = "მომხმარებელი ან პაროლი არასწორია!";
     }
 ?>
 
@@ -30,6 +43,10 @@
     <br><br>
 
     <button type=submit>გაგზავნა</button>
+
+<p><?php echo $message; ?></p>
+
+
     </form>
 </body>
 </html>
