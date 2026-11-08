@@ -17,6 +17,8 @@
     }
     $sum = array_sum($randomNumbers);
     $average = $sum / $quantity;
+    $log = "რიცხვები: ". implode(", ", $randomNumbers). "საშვალო: ". $average; 
+    file_put_contents("test.txt", $log);
     
 }
 
@@ -46,7 +48,7 @@
 
     if (isset($average)){
             echo "რანდომ რიცხვები: ";
-
+    
       foreach ($randomNumbers as $random) {
       echo $random. " ";
     }
