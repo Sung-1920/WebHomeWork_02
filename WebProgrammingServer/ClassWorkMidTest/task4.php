@@ -33,15 +33,25 @@
     ];
 
     $category = $_GET["category"] ?? "";
+    $export = $_GET["export"] ?? "";
+    $filteredProducts = []; 
 
     foreach($products as $product){
         if($category == "" || $product["category"] == $category){
+            $filteredProducts[] = $product;
+
             echo $product["name"] . "<br>";
             echo $product["id"] . "<br>";
             echo $product["category"] . "<br>";
             echo $product["price"] . "<br>" . "<br>";
         }
     }
+    if ($export == "true") {
+    file_put_contents(
+        __DIR__ . "/filtered_products.txt",
+        print_r($filteredProducts, true)
+    );
+}
 ?>
 
 <!DOCTYPE html>
